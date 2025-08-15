@@ -1,0 +1,42 @@
+body { 
+    background: #1e293b; 
+    color: white; 
+    font-family: sans-serif; 
+    text-align: center; 
+  }
+
+  canvas { 
+    background: white; 
+    cursor: crosshair; 
+    width: 300px;
+    height: 300px;
+    border:turquoise;
+  }
+
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  button:hover:enabled {
+    background-color: #0056b3;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    margin-top: 20px;
+  }
