@@ -5,7 +5,25 @@ body {
     text-align: center; 
   }
 
+  #status{
+    margin:10px;
+  }
+
+  #trainModel{
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
   canvas { 
+    display: block;
+    margin: 20px auto;
+    align-item: center;
     background: white; 
     cursor: crosshair; 
     width: 300px;
@@ -13,8 +31,8 @@ body {
     border:turquoise;
   }
 
-  button {
-    margin: 10px;
+  #clear, #predictDigit {
+    margin: 20px;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;

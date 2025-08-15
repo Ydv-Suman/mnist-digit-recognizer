@@ -2,6 +2,7 @@ const canvas = document.getElementById('canvas');
 const contex = canvas.getContext('2d'); // changed variable name
 const clear = document.getElementById('clear');
 let isDrawing = false;
+let model;
 
 // Fill background black
 contex.fillStyle = 'black';
