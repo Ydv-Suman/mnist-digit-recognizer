@@ -1,60 +1,121 @@
 body { 
-    background: #1e293b; 
-    color: white; 
-    font-family: sans-serif; 
-    text-align: center; 
-  }
+  background: #1e293b; 
+  color: white; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-align: center; 
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
 
-  #status{
-    margin:10px;
-  }
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8fafc;
+}
 
-  #trainModel{
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #e2e8f0;
+}
 
-  canvas { 
-    display: block;
-    margin: 20px auto;
-    align-item: center;
-    background: white; 
-    cursor: crosshair; 
-    width: 300px;
-    height: 300px;
-    border:turquoise;
-  }
+#status {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.1rem;
+  min-height: 24px;
+  color: #cbd5e1;
+}
 
-  #clear, #predictDigit {
-    margin: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-  }
-  
-  button:hover:enabled {
-    background-color: #0056b3;
+#trainModel, #clear, #predictDigit {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#progress {
+  width: 80%;
+  max-width: 400px;
+  height: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+canvas { 
+  display: block;
+  margin: 20px auto;
+  background: black; 
+  cursor: crosshair; 
+  border: 3px solid turquoise;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  touch-action: none; 
+  max-width: 300px;
+  max-height: 300px;
+}
+
+button:disabled {
+  background-color: #64748b;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button:hover:enabled {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+button:active:enabled {
+  transform: translateY(0);
+}
+
+.progress {
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
   }
   
   h1 {
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
   
-  h2 {
-    margin-top: 20px;
+  canvas {
+    width: 280px;
+    height: 280px;
   }
+  
+  button {
+    padding: 12px 16px;
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+
+#progress::-webkit-progress-bar {
+  background-color: #374151;
+  border-radius: 10px;
+}
+
+#progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+#progress::-moz-progress-bar {
+  background: linear-gradient(90deg, #007bff, #00d4ff);
+  border-radius: 10px;
+}
